@@ -25,4 +25,4 @@ Add screenshots or GIFs here.
 
 ## Credits
 Developed by: Pioneer9110.\
-Sound files sourced from: www.kenney.nl
+Sound files sourced from: www.kenney.nl and [captaincrunch80](https://opengameart.org/content/3-ping-pong-sounds-8-bit-style)
