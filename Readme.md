@@ -21,7 +21,7 @@ A minimalist Pong remake for Android made in Unity 2021.3.6f1.
 Coming soon / [Itch.io Link here]
 
 ## Screenshots
-![Title Screen](User-attachments/TitleScreen.jpg)
+![Title Screen](User-attachments/Titlescreen.jpg)
 ![Gameplay Image](User-attachments/Project_SS.jpg)
 
 ## Credits
