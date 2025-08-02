@@ -15,7 +15,7 @@ A minimalist Pong remake for Android made in Unity 2021.3.6f1.
 - Android SDK
 
 ## APK Download
-Coming soon / [Itch.io Link here]
+[Download Pong here](https://pioneer9110.itch.io/pong)
 
 ## Screenshots
 ![Title Screen](User-attachments/Titlescreen.jpg)
