@@ -6,6 +6,8 @@ public class Ball_Controller : MonoBehaviour
     public float speedIncrease = 0.5f;    // Speed gain per paddle hit
     public float maxSpeed = 15f;          // Cap speed
     public float minYVelocity = 0.5f;     // Prevents horizontal "sticking"
+    private float lastCollisionTime = 0f;
+    private float collisionCooldown = 0.02f; // 1 physics step at 50 FPS
 
     private Rigidbody2D rb;
 
@@ -25,6 +27,11 @@ public class Ball_Controller : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (Time.time - lastCollisionTime < collisionCooldown)
+            return; // Ignore extra collisions in same frame
+
+        lastCollisionTime = Time.time;
+
         Audio_Manager.Instance.PlayBounce();
         Vector2 vel = rb.velocity;
 

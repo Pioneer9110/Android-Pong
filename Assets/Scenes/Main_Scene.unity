@@ -635,11 +635,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 1585950140}
-  moveSpeed: 4
-  verticalOffsetRange: 0.5
-  reactionInterval: 0.4
+  baseMaxSpeed: 4
+  speedScaleFactor: 0.5
+  maxAIMaxSpeed: 10
+  baseVerticalOffsetRange: 0.6
+  baseReactionInterval: 0.4
   smoothTime: 0.15
-  maxSpeed: 10
   trackingDeadZoneY: 0.25
 --- !u!1 &303355168
 GameObject:
@@ -3004,6 +3005,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  speedIncrease: 0.5
+  maxSpeed: 10
   minYVelocity: 0.5
 --- !u!1 &1734862337
 GameObject:

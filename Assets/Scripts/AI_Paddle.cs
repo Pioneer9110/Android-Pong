@@ -38,7 +38,16 @@ public class AI_Paddle : MonoBehaviour
         float dynamicMaxSpeed = Mathf.Min(baseMaxSpeed + (ballSpeed * speedScaleFactor), maxAIMaxSpeed);
 
         // Scale tracking error with ball speed (miss more at high speeds)
-        float verticalOffsetRange = baseVerticalOffsetRange + (ballSpeed * 0.1f);
+        // Base offset scaling with speed
+        float minOffset = 0.05f; // almost perfect at low speeds
+        float maxOffset = baseVerticalOffsetRange; 
+        float verticalOffsetRange = Mathf.Lerp(minOffset, maxOffset, Mathf.InverseLerp(2f, 5f, ballSpeed));
+
+        // Occasionally mess up even at low speeds
+        if (ballSpeed < 5f && Random.value < 0.05f) // 5% chance early on
+        {
+            verticalOffsetRange += Random.Range(0.3f, 0.6f); // extra sloppiness burst
+        }
 
         // Scale reaction time with ball speed (slower at high speeds)
         float reactionInterval = baseReactionInterval + (ballSpeed * 0.05f);
